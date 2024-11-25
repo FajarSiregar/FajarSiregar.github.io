@@ -12,6 +12,10 @@
     text-decoration: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Poppins", sans-serif;
     background-color: var(--bgd);
@@ -79,6 +83,229 @@ body {
     display: none;
 }
 
+/* Hero Section Style Awal */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url("../img/Coffe.Unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(1, 1, 3, 1) 8%, rgba(255, 255, 255, 0) 50%);
+}
+
+.hero .content {
+    padding: 1.4rem 7%;
+    max-width: 60rem;
+}
+
+.hero .content h1 {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.hero .content h1 span {
+    color: var(--utama);
+}
+
+.hero .content p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    line-height: 1rem;
+    font-weight: 300;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+   
+}
+
+.hero .content .cta {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: var(--utama);
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 5px rgba(1, 1, 3, 0.8);
+}
+
+/* Section Tentang Kami Style Awal */
+.tentang-kami, .menu, .kontak {
+    padding: 8rem 7% 1.4rem;
+}
+
+.tentang-kami h2, .menu h2, .kontak h2 {
+    text-align: left;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.tentang-kami h2 span, .menu h2 span, .kontak h2 span {
+    color: var(--utama);
+}
+
+.tentang-kami .row {
+    display: flex;
+}
+
+.tentang-kami .row .tentang-img {
+    flex: 1 1 45rem;
+}
+
+.tentang-kami .row .tentang-img img {
+    width: 100%;
+}
+
+.tentang-kami .row .content {
+    flex: 1 1 35rem;
+    padding: 0 1rem;
+}
+
+.tentang-kami .row .content h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.tentang-kami .row .content p {
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+    font-weight: 100;
+    line-height: 1.6;
+}
+/* Section Tentang Kami Berakhir */
+
+/* Section Menu Style Mulai */
+.menu h2 {
+    text-align: right;
+}
+
+.menu p, .kontak p {
+    text-align: center;
+    font-size: 1rem;
+    margin: auto;
+    font-weight: 100;
+    line-height: 1.6rem;
+}
+
+.menu .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 7rem;
+    justify-content: center;
+}
+
+.menu .row .menu-card {
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+.menu .row .menu-card img {
+    border-radius: 50%;
+    width: 80%;
+}
+
+.menu .row .menu-card .menu-card-title {
+    margin: 1rem auto 0.5rem;
+}
+/* Section Menu Style Berakhir */
+
+/* Section Kontak Style Mulai */
+.kontak .row {
+    display: flex;
+    margin-top: 2rem;
+    background-color: #222;
+}
+
+.kontak .row .map {
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.kontak .row form {
+    flex: 1 1 45rem;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.kontak .row form .input-group {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    background-color: var(--bgd);
+    border: 1px solid #eee;
+    padding-left: 2rem;
+}
+
+.kontak .row form .input-group input {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.4rem;
+    background: none;
+    color: #fff;
+}
+
+.kontak .row form .btn {
+    margin-top: 3rem;
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    font-size: 1.4rem;
+    color: #fff;
+    background-color: var(--utama);
+    cursor: pointer;
+}
+/* Section Kontak Style Berakhir */
+
+/* Footer Style Mulai */
+footer {
+    background-color: var(--utama);
+    text-align: center;
+    padding: 1rem 0 3rem;
+    margin-top: 3rem;
+}
+
+footer .sosial {
+    padding: 1rem 0;
+}
+
+footer .sosial a {
+    color: #fff;
+    margin: 1rem;
+}
+
+footer .sosial a:hover, footer .links a:hover {
+    color: var(--bgd);
+}
+
+footer .links {
+    margin-bottom: 1.4rem;
+}
+
+footer .links a {
+    color: #fff;
+    padding: 0.7rem 1rem;
+}
+
+footer .credit {
+    font-size: 0.8rem;
+}
+
+footer .credit a {
+    color: var(--bgd);
+    font-weight: 700;
+}
+/* Footer Style Berakhir */
 
 /* Media Query CSS */
 /* Laptop */
@@ -111,6 +338,33 @@ body {
         right: 0;
     }
 
+    .tentang-kami .row {
+        height: 70vh;
+    }
+
+    .tentang-kami .row .tentang-img img {
+        height: 24rem;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .tentang-kami .row .content {
+        padding: 0;
+    }
+
+    .tentang-kami .row .content h3 {
+        margin-top: 1rem;
+        font-size: 2rem;
+    }
+
+    .tentang-kami .row .content p {
+        font-size: 1.6rem;
+    }
+
+    .tentang-kami .row {
+        flex-wrap: wrap;
+    }
+
     .navbar .navbar-nav a {
         color: var(--bgd);
         display: block;
@@ -125,6 +379,22 @@ body {
 
     .navbar .navbar-nav a:hover::after {
         transform: scaleX(0.2);
+    }
+
+    .menu p {
+        font-size: 1.2rem;
+    }
+
+    .kontak .row {
+        flex-wrap: wrap;
+    }
+
+    .kontak .row .map {
+        height: 30rem;
+    }
+
+    .kontak .row form {
+        padding-top: 0;
     }
 }
 
