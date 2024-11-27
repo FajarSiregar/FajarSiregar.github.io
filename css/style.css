@@ -83,6 +83,95 @@ body {
     display: none;
 }
 
+/* Navbar Search Style Awal */
+.navbar .search-form {
+    position: absolute;
+    top: 100%;
+    right: 7%;
+    background-color: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.3s;
+}
+
+.navbar .search-form.active {
+    transform: scaleY(1);
+}
+
+.navbar .search-form input {
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--bgd);
+    padding: 1rem;
+}
+
+.navbar .search-form label {
+    cursor: pointer;
+    font-size: 2rem;
+    margin-right: 1.5rem;
+    color: var(--bgd);
+}
+
+/* Shopping Cart Style Mulai */
+.shopping-cart {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    height: 100vh;
+    width: 35rem;
+    pad: 0 1.5rem;
+    background-color: #fff;
+    color: var(--bgd);
+    transition: 0.3s;
+}
+
+.shopping-cart.active {
+    right: 0;
+}
+
+.shopping-cart .cart-item {
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed #666;
+    position: relative;
+}
+
+.shopping-cart img {
+    height: 6rem;
+    border-radius: 50%;
+}
+
+.shopping-cart h3 {
+    font-size: 1.6rem;
+    padding-bottom: 0.5rem;
+}
+
+.shopping-cart .item-price {
+    font-size: 1.2rem;
+
+}
+
+.shopping-cart .remove-item {
+    position: absolute;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.shopping-cart .remove-item:hover {
+    color: var(--utama);
+}
+/* Shopping Cart Berakhir */
+
+/* Navbar Search Style Berakhir */
+
 /* Hero Section Style Awal */
 .hero {
     min-height: 100vh;
@@ -141,17 +230,17 @@ body {
 }
 
 /* Section Tentang Kami Style Awal */
-.tentang-kami, .menu, .kontak {
+.tentang-kami, .menu, .produk, .kontak {
     padding: 8rem 7% 1.4rem;
 }
 
-.tentang-kami h2, .menu h2, .kontak h2 {
+.tentang-kami h2, .menu h2, .produk h2, .kontak h2 {
     text-align: left;
     font-size: 2rem;
     margin-bottom: 3rem;
 }
 
-.tentang-kami h2 span, .menu h2 span, .kontak h2 span {
+.tentang-kami h2 span, .menu h2 span, .produk h2 span, .kontak h2 span {
     color: var(--utama);
 }
 
@@ -220,7 +309,82 @@ body {
 }
 /* Section Menu Style Berakhir */
 
+/* Section Produk Style Mulai */
+.produk .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+    margin-top: 4rem;
+}
+
+.produk .produk-card {
+    text-align: center;
+    border: 1px solid #666;
+    padding: 2rem;
+}
+
+.produk .produk-icons {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.produk .produk-icons a {
+    width: 3rem;
+    height: 3rem;
+    color: #fff;
+    margin: 0.3;
+    border: 1px solid #666;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.produk .produk-icons a:hover {
+    background-color: var(--utama);
+    border: 1px solid var(--utama);
+}
+
+.produk .produk-image {
+    padding: 1rem 0;
+}
+
+.produk .produk-image img {
+    height: 25rem;
+}
+
+.produk .produk-konten h3 {
+font-size: 2rem;
+}
+
+.produk .produk-star {
+    font-size: 1.7rem;
+    padding: 0.8rem;
+    color: var(--utama);
+}
+
+.produk .produk-star .star-full {
+    fill: var(--utama);
+}
+
+.produk .produk-price {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.produk .produk-price span {
+    text-decoration: line-through;
+    font-weight: lighter;
+    font-size: 1rem;
+}
+/* Section Produk Style Berakhir */
+
 /* Section Kontak Style Mulai */
+.kontak h2 {
+    text-align: right;
+}
+
 .kontak .row {
     display: flex;
     margin-top: 2rem;
@@ -307,6 +471,76 @@ footer .credit a {
 }
 /* Footer Style Berakhir */
 
+/* Modal Box Item Detail Style Berakhir */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-container {
+    position: relative;
+    background-color: #fefefe;
+    color: var(--bgd);
+    margin: 15% auto;
+    padding: 1.2rem;
+    border: 1px solid #666;
+    width: 80%;
+    animation: animateModal 0.5s;
+}
+
+/* Modal Animasi Mulai */
+@keyframes animateModal {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+/* Modal Animasi Berakhir */
+
+.modal-container .close-icon {
+    position: absolute;
+    right: 1rem;
+}
+
+.modal-konten {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.modal-konten img {
+    height: 15rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem; 
+}
+
+.modal-konten p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    margin-top: 1.2rem;
+}
+
+.modal-konten a {
+    display: flex;
+    gap: 1rem;
+    width: 12rem;
+    background-color: var(--utama);
+    color: #fff;
+    margin-top: 1rem;
+    padding: 1rem 1.6rem;
+}
+/* Modal Box Item Detail Style Berakhir */
+
 /* Media Query CSS */
 /* Laptop */
 @media (max-width: 1366px) {
@@ -336,6 +570,11 @@ footer .credit a {
 
     .navbar .navbar-nav.active {
         right: 0;
+    }
+
+    .navbar .search-form {
+        width: 90%;
+        right: 2rem;
     }
 
     .tentang-kami .row {
@@ -395,6 +634,10 @@ footer .credit a {
 
     .kontak .row form {
         padding-top: 0;
+    }
+
+    .modal-konten {
+        flex-wrap: wrap;
     }
 }
 

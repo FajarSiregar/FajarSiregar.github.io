@@ -25,16 +25,54 @@
             <a href="#home">Beranda</a>
             <a href="#tentang-kami">Tentang Kami</a>
             <a href="#menu">Menu</a>
+            <a href="#produk">Produk</a>
             <a href="#kontak">Kontak</a>
         </div>
 
         <div class="navbar-extra">
-            <a href="#" id="search"><i data-feather="search"></i></a>
-            <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+            <a href="#" id="search-button"><i data-feather="search"></i></a>
+            <a href="#" id="shopping-cart-button"><i data-feather="shopping-cart"></i></a>
             <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
         </div>
+
+        <!-- Search Bar Mulai -->
+         <div class="search-form">
+            <input type="search" id="search-box" placeholder="Cari Disini...">
+            <label for="search-box"><i data-feather="search"></i></label>
+         </div>
+         <!-- Search Bar Berakhir -->
+
+         <!-- Keranjang Bar Mulai -->
+          <div class="shopping-cart">
+            <div class="cart-item">
+                <img src="img/produk/Produk-Coffe-Unsplash.jpg" alt="Produk 1">
+                <div class="item-detail">
+                    <h3>Kopi Gayo</h3>
+                    <div class="item-price">IDR 89.999</div>
+                </div>
+                <i data-feather="trash-2" class="remove-item"></i>
+            </div>
+            <div class="cart-item">
+                <img src="img/produk/Produk-Coffe-Unsplash.jpg" alt="Produk 1">
+                <div class="item-detail">
+                    <h3>Kopi Gayo Takengon</h3>
+                    <div class="item-price">IDR 99.999</div>
+                </div>
+                <i data-feather="trash-2" class="remove-item"></i>
+            </div>
+            <div class="cart-item">
+                <img src="img/produk/Produk-Coffe-Unsplash.jpg" alt="Produk 1">
+                <div class="item-detail">
+                    <h3>Kopi Aceh Tenggara</h3>
+                    <div class="item-price">IDR 59.999</div>
+                </div>
+                <i data-feather="trash-2" class="remove-item"></i>
+            </div>
+          </div>
+         <!-- Keranjang Bar Berakhir -->
+
      </nav>
-     <!-- NavBar Berakhir -->
+     <!-- Search Bar Berakhir -->
 
      <!-- Hero Section Mulai -->
       <section class="hero" id="home">
@@ -103,8 +141,78 @@
     </section>
      <!-- Section Menu Berakhir-->
 
+    <!-- Section Produk Mulai -->
+     <section class="produk" id="produk">
+        <h2>Produk <span>Kami</span></h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat explicabo asperiores debitis impedit, quam saepe.</p>
+
+        <div class="row">
+            <div class="produk-card">
+                <div class="produk-icons">
+                    <a href="#"><i data-feather="shopping-cart"></i></a>
+                    <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
+                </div>
+                <div class="produk-image">
+                    <img src="img/produk/Produk-Coffe-Unsplash.jpg" alt="Produk 1">
+                </div>
+                <div class="produk-konten">
+                    <h3>Kopi Gayo</h3>
+                    <div class="produk-star">
+                            <i data-feather="star" class="star-full"></i>
+                            <i data-feather="star" class="star-full"></i>
+                            <i data-feather="star" class="star-full"></i>
+                            <i data-feather="star" class="star-full"></i>
+                            <i data-feather="star"></i>
+                    </div>
+                    <div class="produk-price">IDR 79.999 <span>IDR 99.999</span></div>
+                </div>
+            </div>
+            <div class="produk-card">
+                <div class="produk-icons">
+                    <a href="#"><i data-feather="shopping-cart"></i></a>
+                    <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
+                </div>
+                <div class="produk-image">
+                    <img src="img/produk/Produk-Coffe-Unsplash.jpg" alt="Produk 1">
+                </div>
+                <div class="produk-konten">
+                    <h3>Kopi Gayo Takengon</h3>
+                    <div class="produk-star">
+                            <i data-feather="star" class="star-full"></i>
+                            <i data-feather="star" class="star-full"></i>
+                            <i data-feather="star" class="star-full"></i>
+                            <i data-feather="star" class="star-full"></i>
+                            <i data-feather="star"></i>
+                    </div>
+                    <div class="produk-price">IDR 99.999 <span>IDR 124.999</span></div>
+                </div>
+            </div>
+            <div class="produk-card">
+                <div class="produk-icons">
+                    <a href="#"><i data-feather="shopping-cart"></i></a>
+                    <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
+                </div>
+                <div class="produk-image">
+                    <img src="img/produk/Produk-Coffe-Unsplash.jpg" alt="Produk 1">
+                </div>
+                <div class="produk-konten">
+                    <h3>Kopi Aceh Tenggara</h3>
+                    <div class="produk-star">
+                            <i data-feather="star" class="star-full"></i>
+                            <i data-feather="star" class="star-full"></i>
+                            <i data-feather="star" class="star-full"></i>
+                            <i data-feather="star"></i>
+                            <i data-feather="star"></i>
+                    </div>
+                    <div class="produk-price">IDR 59.999 <span>IDR 89.999</span></div>
+                </div>
+            </div>
+        </div>
+     </section>
+    <!-- Section Produk Mulai -->
+
      <!-- Section Kontak Mulai-->
-      <section id="kontak" class="kontak">
+    <section id="kontak" class="kontak">
         <h2>Kontak <span>Kami</span></h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, neque.</p>
 
@@ -126,11 +234,11 @@
                 <button type="submit" class="btn">Kirim Pesan</button>
             </form>
         </div>
-      </section>
-     <!-- Section Kontak Berakhir-->
+    </section>
+    <!-- Section Kontak Berakhir-->
 
-     <!-- Footer Mulai-->
-      <footer>
+    <!-- Footer Mulai-->
+    <footer>
         <div class="sosial">
             <a href="#"><i data-feather="instagram"></i></a>
             <a href="#"><i data-feather="facebook"></i></a>
@@ -147,15 +255,40 @@
         <div class="credit">
             <p>Created by <a href="">Leurisme Coffe</a>. | &copy; 2024.</p>
         </div>
-      </footer>
-     <!-- Footer Berakhir-->
+    </footer>
+    <!-- Footer Berakhir-->
 
-     <!-- Akhir Feather Icons -->
+    <!-- Modal Box Detail Mulai -->
+     <div class="modal" id="item-detail-modal">
+        <div class="modal-container">
+            <a href="#" class="close-icon"><i data-feather="x"></i></a>
+            <div class="modal-konten">
+                <img src="img/produk/Produk-Coffe-Unsplash.jpg" alt="Kopi Gayo">
+                <div class="produk-konten">
+                    <h3>Kopi Gayo</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea placeat voluptatem perspiciatis quo ducimus voluptatum?</p>
+                    <div class="produk-star">
+                        <i data-feather="star" class="star-full"></i>
+                        <i data-feather="star" class="star-full"></i>
+                        <i data-feather="star" class="star-full"></i>
+                        <i data-feather="star" class="star-full"></i>
+                        <i data-feather="star"></i>
+                    </div>
+                    <div class="produk-price">IDR 79.999 <span>IDR 99.999</span>
+                    </div>
+                    <a href="#"><i data-feather="shopping-cart"></i><span>add to cart</span></a>
+                </div>
+            </div>
+        </div>
+     </div>
+    <!-- Modal Box Detail Berakhir -->
+    
+    <!-- Akhir Feather Icons -->
     <script>
         feather.replace();
     </script>
 
-     <!-- Awal JavaScript -->
-     <script src="js/script.js"></script>
+    <!-- Awal JavaScript -->
+    <script src="js/script.js"></script>
 </body>
 </html>
