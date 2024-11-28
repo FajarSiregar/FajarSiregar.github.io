@@ -372,14 +372,15 @@ body {
 
 .produk .container .card__container .card__data .card__description {
     display: block;
-    font-size: var(--small-font-size);
+    font-size: 1rem;
     margin-bottom: .25rem;
+    color: var(--bgd);
 }
 
 .produk .container .card__container .card__data .card__title {
-    font-size: var(--h2-font-size);
+    font-size: 1.5rem;
     font-weight: 500;
-    color: var(--title-color);
+    color: #fff;
     margin-bottom: .75rem;
 }
 
@@ -387,7 +388,7 @@ body {
     text-decoration: none;
     font-size: var(--small-font-size);
     font-weight: 500;
-    color: var(--first-color);
+    color: var(--bgd);
 }
 
 .produk .container .card__container .card__data .card__button:hover {
@@ -702,6 +703,27 @@ footer .credit a {
 
     .menu p {
         font-size: 1.2rem;
+    }
+
+    .produk .container .card__container .card__data .card__description {
+        display: block;
+        font-size: 1.5rem;
+        margin-bottom: .25rem;
+        color: var(--bgd);
+    }
+
+    .produk .container .card__container .card__data .card__title {
+        font-size: 3rem;
+        font-weight: 500;
+        color: #fff;
+        margin-bottom: .75rem;
+    }
+
+    .produk .container .card__container .card__data .card__button {
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: var(--bgd);
     }
 
     .kontak .row {
