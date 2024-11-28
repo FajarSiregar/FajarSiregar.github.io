@@ -653,4 +653,12 @@ footer .credit a {
     html {
         font-size: 55%;
     }
+
+    .hero .content {
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
+        line-height: 1rem;
+        font-weight: 300;
+        text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    }
 }
